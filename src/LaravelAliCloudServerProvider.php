@@ -24,7 +24,7 @@ class LaravelAliCloudServerProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '../config/alicloud.php' => config_path('alicloud.php'),
+            __DIR__ . '/../config/alicloud.php' => config_path('alicloud.php'),
         ]);
     }
 }
