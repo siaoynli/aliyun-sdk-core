@@ -11,4 +11,11 @@ composer require siaoynli/aliyun-sdk-core
 
 #### 使用说明
 
+config/app.php add
+
+AliCloud\Core\LaravelAliCloudServerProvider::class,
+
+
+run:
+
 php artisan vendor:publish --provider='AliCloud\Core\LaravelAliCloudServerProvider'
