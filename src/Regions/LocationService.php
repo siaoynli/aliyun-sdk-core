@@ -66,7 +66,8 @@ class LocationService
 
     private function checkCacheIsExpire($key)
     {
-        $lastClearTime = self::$lastClearTimePerProduct[$key];
+        $lastClearTime = isset(self::$lastClearTimePerProduct[$key])?self::$lastClearTimePerProduct[$key]:null;
+       // $lastClearTime = self::$lastClearTimePerProduct[$key];
         if ($lastClearTime == null) {
             $lastClearTime = time();
             self::$lastClearTimePerProduct[$key] = $lastClearTime;
